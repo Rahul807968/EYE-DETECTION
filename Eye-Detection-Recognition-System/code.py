@@ -21,6 +21,7 @@ while 1:
     #global_time = time.time()
     ret, img = cap.read()
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    print("GREY",gray)
     faces = face_cascade.detectMultiScale(gray, 1.3, 5) #HERE FACE WILL BE DETECTED
 
     for (x,y,w,h) in faces:
